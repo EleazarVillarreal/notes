@@ -2,10 +2,13 @@
 
 # Git
 
-* States
+* States:
     * untracked - Not being tracked by Git.
     * staged - Marked for inclusion in the next commit.
     * committed - Saved to the repository's history.
+* Tree - Git's way of storing a directory.
+* Blob - Git's way of storying a file.
+
 
 ## Git Commands
 
@@ -16,3 +19,4 @@
 * `git commit -m "your message"` - Add a message to your commit.
 * `git log` - Shows a history of the commits in a repository.
     * Each commit has a unique identifier called a "commit hash".
+* `git cat-file -p <blob/commit/tree hash>` - Allows you to see the contents of a specific blob, commit, or tree and formats the output.
