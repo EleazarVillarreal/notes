@@ -1,5 +1,5 @@
 <image alt="Docker Logo" height="100px" src="./images/docker.png" width="100px" />
 
-# Docker  
+# Docker
 
-* Ensures consistency across environments
+* Ensures consistency across environments.
