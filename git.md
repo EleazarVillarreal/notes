@@ -47,3 +47,5 @@
     * `--parents` - 
     * Each commit has a unique identifier called a "commit hash".
 * `git cat-file -p <blob/commit/tree hash>` - Allows you to see the contents of a specific blob, commit, or tree and formats the output.
+* `git reset --soft <commit hash>` - Will allow you to go back to a commit but keep all of your changes. Committed changes with be uncommitted and staged.
+* `git reset --hard <commit hash>` - Will allow you to go back to a commit BUT discard all of your changes for good.
