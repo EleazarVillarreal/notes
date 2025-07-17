@@ -14,6 +14,9 @@
 * Tree - Git's way of storing a directory.
 * Blob - Git's way of storing a file.
 * Branch - A named pointer to a specific commit.
+* Fast-Forward Merge - Merging a branch that is an ancestor of the main branch head.
+* Rebase - Helps you take the divergent commits from your feature branch and move them to the tip of the base branch (head) that the feature branch is based on which will allow for a fast-forward merge.
+    * You should never rebase a public branch like main onto anything else.
 
 ## Git Commands
 
@@ -30,13 +33,17 @@
 * `git branch` - Shows the current branch you are on.
 * `git branch <branch_name>` - Creates a branch with the name you specified.
 * `git branch -m <oldname> <newname>` - Renames your old branch to the new name.
+* `git branch -d <branch_name>` - Deletes branch specified.
 * `git switch -c <branch_name>` & `git checkout -b <branch_name` - Will create a branch if it doesn't already exist `-c` and will automatically switch over to it.
 * `git status` - Shows the current state of your repo. It will tell you which files are untracked, staged, and committed.
 * `git add <path/to/file | pattern>` - Adds directory or file to commit.
     * You can add multiple directories and file names as arguments to add to a commit.
 * `git add .` - Adds all changed directories and files to commit.
 * `git commit -m "your message"` - Add a message to your commit.
+* `git merge <branch_name>` - Merges the specific branch_name history into the current branch you're on.
 * `git log` - Shows a history of the commits in a repository.
     * `--oneline` - Shows a more compact view of the commit history.
+    * `--graph` - Displays how each branch has diverged and merged back into main through a vertical line.
+    * `--parents` - 
     * Each commit has a unique identifier called a "commit hash".
 * `git cat-file -p <blob/commit/tree hash>` - Allows you to see the contents of a specific blob, commit, or tree and formats the output.
