@@ -41,6 +41,7 @@
 * `git add .` - Adds all changed directories and files to commit.
 * `git commit -m "your message"` - Add a message to your commit.
 * `git merge <branch_name>` - Merges the specific branch_name history into the current branch you're on.
+* `git pull <remote_branch>` - Fetches and merges any commits from the remote branch.
 * `git log` - Shows a history of the commits in a repository.
     * `--oneline` - Shows a more compact view of the commit history.
     * `--graph` - Displays how each branch has diverged and merged back into main through a vertical line.
