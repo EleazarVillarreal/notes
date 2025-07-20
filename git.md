@@ -30,6 +30,7 @@
     * `--unset <key>` - Removes a specific configuration value.
     * `--unset-all <key>` - Removes all instances of the specific configuration value.
     * `--remove-section` - Removes an entire section from your Git configuration.
+* `git remote add <alias> <url>` - Adds a git URL as an alias.
 * `git branch` - Shows the current branch you are on.
 * `git branch <branch_name>` - Creates a branch with the name you specified.
 * `git branch -m <oldname> <newname>` - Renames your old branch to the new name.
@@ -41,7 +42,8 @@
 * `git add .` - Adds all changed directories and files to commit.
 * `git commit -m "your message"` - Add a message to your commit.
 * `git merge <branch_name>` - Merges the specific branch_name history into the current branch you're on.
-* `git pull <remote_branch>` - Fetches and merges any commits from the remote branch.
+* `git pull <remote_branch>` - Fetches and merges any commits from the remote branch. If you execute this command without a specified remote branch it will pull your current branch from the remote repo.
+* `git push <alias> <branch>` - Transmits local branch commits to the remote repository branch.
 * `git log` - Shows a history of the commits in a repository.
     * `--oneline` - Shows a more compact view of the commit history.
     * `--graph` - Displays how each branch has diverged and merged back into main through a vertical line.
