@@ -12,3 +12,7 @@
 * Docker Hub - The official cloud service for storing and sharking Docker images.
 * Container - A standard unit of software that packages up code and all its dependencies, so the application runs quickly and reliably from one computing environment to another. It is a running instance of an image.
 * Image - A read-only definition of an application and everything it needs to run properly.
+
+## Commands
+* `docker pull <image_name>` - Pulls an image from Docker Hub.
+* `docker images` - Lists all your local images.
