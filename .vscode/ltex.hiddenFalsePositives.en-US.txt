@@ -1,1 +1,2 @@
 {"rule":"EN_COMPOUNDS","sentence":"^\\QAnti-pattern: Using useState + useEffect to sync derived data.\\E$"}
+{"rule":"EN_COMPOUNDS","sentence":"^\\QAnti-pattern: Using \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q + \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q to sync derived data.\\E$"}
