@@ -1,3 +1,3 @@
-# Notes
+# 📝 Notes
 
-A repository of my notes in markdown format.
+A repository of my notes in Markdown format.
