@@ -1,0 +1,1 @@
+{"rule":"EN_COMPOUNDS","sentence":"^\\QAnti-pattern: Using useState + useEffect to sync derived data.\\E$"}
