@@ -15,3 +15,4 @@
 * The && operator is a “control flow” operator because, like if/else, it will always result in one of two paths being taken. 
 * Always use boolean values with `&&` because JSX will display the number `0` if your expression evaluates to `0` which may cause difficult bugs to detect. 
 * The `!!` can convert any non-boolean value to a boolean if needed.
+* If you need to display different content depending on a condition then you can use a ternary operator. `condition ? firstExpression : secondExpression`
