@@ -16,3 +16,21 @@
 * Always use boolean values with `&&` because JSX will display the number `0` if your expression evaluates to `0` which may cause difficult bugs to detect. 
 * The `!!` can convert any non-boolean value to a boolean if needed.
 * If you need to display different content depending on a condition then you can use a ternary operator. `condition ? firstExpression : secondExpression`
+
+  ```typescript
+  // Simple range utility function that will return an array
+  const range = (start, end, step = 1) => {
+    let output = [];
+
+    if (typeof end === 'undefined') {
+      end = start;
+      start = 0;
+    }
+
+    for (let i = start; i < end; i += step) {
+      output.push(i);
+    }
+
+    return output;
+  };
+  ```
