@@ -12,8 +12,8 @@
 * When using fragments, it's sometimes required to switch to the long-form `React.Fragment`, so that we can apply a key. `<React.Fragment key={unique.id}>`
 * Keys only have to be unique within their array and not globally unique across the entire applications.
 * You can use "control flow" operators for conditional logic within a React component.
-* The && operator is a “control flow” operator because, like if/else, it will always result in one of two paths being taken. 
-* Always use boolean values with `&&` because JSX will display the number `0` if your expression evaluates to `0` which may cause difficult bugs to detect. 
+* The `&&` operator is a “control flow” operator because, like if/else, it will always result in one of two paths being taken. 
+* Always use boolean values with `&&` because JSX will display the number `0` if your expression evaluates to `0` which may cause unexpected results. 
 * The `!!` can convert any non-boolean value to a boolean if needed.
 * If you need to display different content depending on a condition then you can use a ternary operator. `condition ? firstExpression : secondExpression`
 
