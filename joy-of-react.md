@@ -34,3 +34,13 @@
     return output;
   };
   ```
+
+  ## Working With State
+
+* The `useState` hook is a special type of function that allows us to "hook into" React internals. It returns an array containing the current value of the state, and a function that allows us to update the state variable.
+* The useState hook can take in an anonymous method that will only run on the very first render to calculate the initial value. <br/> 
+Ex: `useState(() => { return window.localStorage.getItem('saved-count') });`
+* If you call a function within the useState as its default value instead of using an anonymous function the function will be called at every render.
+* State setters are asynchronous, so they do not update the state immediately.
+* Core React Loop - Mount → Trigger → Render (Reconcile) → Commit
+* Not all re-renders require re-paints! If nothing has changed between snapshots, React won't edit any DOM nodes, and nothing will be re-painted.
