@@ -5,7 +5,7 @@
 ## Derived State
 * Rule: If you can calculate (derive) state, don't store it.
 * Anti-Pattern: Using `useState` + `useEffect` to sync derived data.
-* Best practice: Calculate derived values directly in render or with useMemo.
+* Best Practice: Calculate derived values directly in render or with `useMemo`.
 
 ### Benefits:
 * Eliminates synchronization bugs.
