@@ -44,3 +44,5 @@ Ex: `useState(() => { return window.localStorage.getItem('saved-count') });`
 * State setters are asynchronous, so they do not update the state immediately.
 * Core React Loop - Mount → Trigger → Render (Reconcile) → Commit
 * Not all re-renders require re-paints! If nothing has changed between snapshots, React won't edit any DOM nodes, and nothing will be re-painted.
+* React uses a “synthetic” event system which is not the standard events used in JavaScript.
+* Using crypto.randomUUID() can create unique identifiers if you’re needing a unique key in React.
