@@ -44,5 +44,6 @@ Ex: `useState(() => { return window.localStorage.getItem('saved-count') });`
 * State setters are asynchronous, so they do not update the state immediately.
 * Core React Loop - Mount → Trigger → Render (Reconcile) → Commit
 * Not all re-renders require re-paints! If nothing has changed between snapshots, React won't edit any DOM nodes, and nothing will be re-painted.
-* React uses a “synthetic” event system which is not the standard events used in JavaScript.
-* Using crypto.randomUUID() can create unique identifiers if you’re needing a unique key in React.
+* React uses a “synthetic” event system which mimics the standard events used in JavaScript, so it can ensure consistency, removing some edge-case issues with native events being implemented slightly differently between browsers.
+* When we set the `value` attribute on a form input, we tell React that it should be a controlled input. By contrast, if we don't set `value`, the input is an uncontrolled input.
+* Using `crypto.randomUUID()` can create unique identifiers if you’re needing a unique key in React when none is provided.
