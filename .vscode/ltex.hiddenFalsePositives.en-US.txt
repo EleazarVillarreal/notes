@@ -1,2 +1,4 @@
 {"rule":"EN_COMPOUNDS","sentence":"^\\QAnti-pattern: Using useState + useEffect to sync derived data.\\E$"}
 {"rule":"EN_COMPOUNDS","sentence":"^\\QAnti-pattern: Using \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q + \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q to sync derived data.\\E$"}
+{"rule":"WHITESPACE_RULE","sentence":"^\\QBut works well with data fetching libraries like SWR & Tan Stack Query)  State Related Challenges:\nFetching data at the right time.\\E$"}
+{"rule":"WHITESPACE_RULE","sentence":"^\\QBut works well with data fetching libraries like SWR & Tan Stack Query)  Server State Related Challenges:\nFetching data at the right time.\\E$"}
