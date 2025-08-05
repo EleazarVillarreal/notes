@@ -47,3 +47,12 @@ Ex: `useState(() => { return window.localStorage.getItem('saved-count') });`
 * React uses a “synthetic” event system which mimics the standard events used in JavaScript, so it can ensure consistency, removing some edge-case issues with native events being implemented slightly differently between browsers.
 * When we set the `value` attribute on a form input, we tell React that it should be a controlled input. By contrast, if we don't set `value`, the input is an uncontrolled input.
 * Using `crypto.randomUUID()` can create unique identifiers if you’re needing a unique key in React when none is provided.
+
+### Types Of State & Applications
+* Static sites usually have very minimal need for global state. (No need for state management libraries.)
+* Client heavy websites usually have a lot of complex global state. A lot of state manipulation is happening in the browser. (Usually a good use case to bring in a state management library.)
+* Server heavy applications work primarily with server state. A lot of complex data is stored in a database, and the application fetches that data to preset to the user. Most CRUD applications fit into this category. (Usually not a good use case for a state management library. But works well with data fetching libraries like [SWR](https://swr.vercel.app/) & [Tan Stack Query](https://tanstack.com/query/latest)) <br/>
+State Related Challenges:
+  * Fetching data at the right time.
+  * Making sure the data doesn't grow stale.
+  * Caching data so you don't repeat requests unnecessarily.
