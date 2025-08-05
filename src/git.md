@@ -1,4 +1,4 @@
-<image alt="Docker Logo" height="100px" src="./images/git.png" width="100px" />
+<image alt="Docker Logo" height="100px" src="../images/git.png" width="100px" />
 
 # Git
 
