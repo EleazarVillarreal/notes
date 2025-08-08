@@ -56,7 +56,3 @@ Server State Related Challenges:
   * Fetching data at the right time.
   * Making sure the data doesn't grow stale.
   * Caching data so you don't repeat requests unnecessarily.
-
-  ## React Hooks
-  
-  * 
