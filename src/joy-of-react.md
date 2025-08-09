@@ -3,7 +3,6 @@
 # The Joy of React
 
 ## React Fundamentals
-
 * Expression slots allow you to use JavaScript expressions within JSX using the curly braces `{}`. They also allow you to add comments to your JSX. `{/* Some Comment! */}`
 * It's possible to set attributes to `true` by specifying only the key as a property in a JSX element.
 * The best way to use fallback values for props is to use default values instead of `||` or `??` in the component itself.
@@ -36,7 +35,6 @@
   ```
 
   ## Working With State
-
 * The `useState` hook is a special type of function that allows us to "hook into" React internals. It returns an array containing the current value of the state, and a function that allows us to update the state variable.
 * The useState hook can take in an anonymous method that will only run on the very first render to calculate the initial value. <br/> 
 Ex: `useState(() => { return window.localStorage.getItem('saved-count') });`
