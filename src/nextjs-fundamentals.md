@@ -11,6 +11,10 @@
 * Use the built-in [CSS Modules](https://github.com/css-modules/css-modules) when you want scoped styles for specific components to prevent collisions.
 * For conditional class names, Vercel recommends using the [clsx](https://www.npmjs.com/package/clsx) package.
 
+### Navigation
+
+### Reserved File Names
+
 ## Routing
 * A root `layout.{tsx,js}` is required for correct route rendering and can be placed in route groups without affecting the URL structure.
 * A root `page.{tsx,js}` is only required if you need to display content at the base route (`/`).
@@ -25,3 +29,16 @@
 * Use [`generateStaticParams`](https://nextjs.org/docs/app/api-reference/functions/generate-static-params) with dynamic routes to pre-generate routes at build time, improving performance by avoiding on-demand generation at request time.
 * Retrieve the slug(s) in the directory’s `page.{tsx,js}` file via the params prop.
 * In Next.js 15, you must await the params prop.
+
+## Rendering
+
+## Server Components
+* Run entirely on the server, reducing client-side load by handling data fetching, rendering, and heavy computation on the server.
+* Allows direct database queries, internal API calls, or access to secure server-only code without exposing anything to the client or requiring an extra API layer.
+* Supports `async/await` directly in the component body, enabling simpler, co-located data fetching.
+* No JavaScript is shipped for these components, so they cannot manage state, handle user interactions, or access browser APIs.
+* You can render a Server Component within a Client Component by passing it as children.
+
+## Data Fetching
+
+## API Routes
