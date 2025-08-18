@@ -16,7 +16,7 @@
 ### Reserved File Names
 
 ## Routing
-* A root `layout.{tsx,js}` is required for correct route rendering and can be placed in route groups without affecting the URL structure.
+* A root `layout.{tsx,js}` is required for correct route rendering and can be placed in route groups without affecting the URL structure. Without it, routes in that segment cannot render.
 * A root `page.{tsx,js}` is only required if you need to display content at the base route (`/`).
 * In Next.js, a folder inside the app directory becomes a public route only if it contains a `page.{tsx,js}`. Without this file, the folder remains inaccessible to the public.
 * Create a route group by wrapping a directory name in parentheses `()`, allowing logical organization of routes without affecting the URL structure. (e.g, `(dashboard)`)
@@ -34,10 +34,25 @@
 
 ## Server Components
 * Run entirely on the server, reducing client-side load by handling data fetching, rendering, and heavy computation on the server.
+Improves [First Contentful Paint (FCP)](https://web.dev/articles/fcp) and streams content progressively to the client.* 
 * Allows direct database queries, internal API calls, or access to secure server-only code without exposing anything to the client or requiring an extra API layer.
 * Supports `async/await` directly in the component body, enabling simpler, co-located data fetching.
 * No JavaScript is shipped for these components, so they cannot manage state, handle user interactions, or access browser APIs.
 * You can render a Server Component within a Client Component by passing it as children.
+```TypeScript
+// Server component with async & await
+async function getContent() {
+  const res = await fetch('https://cms.com/...')
+	return await res.json()
+}
+
+export async function ServerComponent() {
+  const data = await getContent()
+	return (
+		<div>{data.title}</div>
+	)
+}
+```
 
 ## Data Fetching
 
