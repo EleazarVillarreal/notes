@@ -16,8 +16,13 @@
 ### Reserved File Names
 
 #### Layout
+* A root `layout.{tsx,jsx,js}` is required to structure the initial UI and ensure all routes render correctly. It’s also the place to define application-wide metadata (e.g., `<title>`, `<meta>`).
+* Layouts do not re-render on client-side navigation. They can fetch data like pages, but won’t re-fetch after subsequent route changes.
+* Each route directory can define its own `layout.{tsx,jsx,js}` for different metadata or structure. Layouts nest automatically by default, but you can opt out of parent layouts using route groups.
 
 #### Template
+* Templates behave like layouts, but unlike layouts they re-render on every navigation, creating new instances of their children each time.
+* Best suited for layouts that require animations, transitions, or other effects that should replay whenever the user navigates between routes.
 
 #### Loading
 
