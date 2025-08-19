@@ -15,6 +15,14 @@
 
 ### Reserved File Names
 
+#### Layout
+
+#### Template
+
+#### Loading
+
+#### Error
+
 ## Routing
 * A root `layout.{tsx,js}` is required for correct route rendering and can be placed in route groups without affecting the URL structure. 
 * Without a root `layout.{tsx,js}`, routes in that segment cannot render.
