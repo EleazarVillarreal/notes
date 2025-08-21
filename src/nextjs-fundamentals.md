@@ -16,17 +16,24 @@
 ### Reserved File Names
 
 #### Layout
-* A root `layout.{tsx,jsx,js}` is required to structure the initial UI and ensure all routes render correctly. It’s also the place to define application-wide metadata (e.g., `<title>`, `<meta>`).
+* A root `layout.{tsx,js}` is required to structure the initial UI and ensure all routes render correctly. It’s also the place to define application-wide metadata (e.g., `<title>`, `<meta>`).
 * Layouts do not re-render on client-side navigation. They can fetch data like pages, but won’t re-fetch after subsequent route changes.
-* Each route directory can define its own `layout.{tsx,jsx,js}` for different metadata or structure. Layouts nest automatically by default, but you can opt out of parent layouts using route groups.
+* Each route directory can define its own `layout.{tsx,js}` for different metadata or structure. Layouts nest automatically by default, but you can opt out of parent layouts using route groups.
 
 #### Template
 * Templates behave like layouts, but unlike layouts they re-render on every navigation, creating new instances of their children each time.
 * Best suited for layouts that require animations, transitions, or other effects that should replay whenever the user navigates between routes.
 
 #### Loading
+* Create a `loading.{tsx,js}` file in the same directory as a route to define a fallback UI while the page’s data is loading.
+* For finer control, you can also use React Suspense to provide fallback UIs for individual components.
 
 #### Error
+* Create an `error.{tsx,js}` file in the same directory as a route to define a fallback UI when an error occurs during data fetching.
+* Each error file receives two props:
+  * `error` — an object containing details about the error.
+  * `reset` — a function that re-attempts rendering the page when called.
+* `error.{tsx,js}` must be a Client Component, so include the `"use client"` directive at the top of the file.
 
 ## Routing
 * A root `layout.{tsx,js}` is required for correct route rendering and can be placed in route groups without affecting the URL structure. 
@@ -50,6 +57,7 @@ Improves [First Contentful Paint (FCP)](https://web.dev/articles/fcp) and stream
 * Allows direct database queries, internal API calls, or access to secure server-only code without exposing anything to the client or requiring an extra API layer.
 * Supports `async/await` directly in the component body, enabling simpler, co-located data fetching.
 * No JavaScript is shipped for these components, so they cannot manage state, handle user interactions, or access browser APIs.
+* You can render Client Components inside Server Components, but only serializable props (JSON-safe values) can be passed down — functions, class instances, and other non-plain objects are not supported.
 * You can render a Server Component within a Client Component by passing it as children.
 ```TypeScript
 // Server component with async & await
