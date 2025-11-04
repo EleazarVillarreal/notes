@@ -29,7 +29,7 @@
 * For finer control, you can also use React Suspense to provide fallback UIs for individual components.
 
 #### Error
-* Create an `error.{tsx,js}` file in the same directory as a route to define a fallback UI when an error occurs during data fetching.
+* Create a `error.{tsx,js}` file in the same directory as a route to define a fallback UI when an error occurs during data fetching.
 * Each error file receives two props:
   * `error` — an object containing details about the error.
   * `reset` — a function that re-attempts rendering the page when called.
@@ -53,26 +53,27 @@
 
 ## Server Components
 * Run entirely on the server, reducing client-side load by handling data fetching, rendering, and heavy computation on the server.
-Improves [First Contentful Paint (FCP)](https://web.dev/articles/fcp) and streams content progressively to the client.* 
+Improves [First Contentful Paint (FCP)](https://web.dev/articles/fcp) and streams content progressively to the client.
 * Allows direct database queries, internal API calls, or access to secure server-only code without exposing anything to the client or requiring an extra API layer.
 * Supports `async/await` directly in the component body, enabling simpler, co-located data fetching.
 * No JavaScript is shipped for these components, so they cannot manage state, handle user interactions, or access browser APIs.
 * You can render Client Components inside Server Components, but only serializable props (JSON-safe values) can be passed down — functions, class instances, and other non-plain objects are not supported.
 * You can render a Server Component within a Client Component by passing it as children.
-```TypeScript
-// Server component with async & await
-async function getContent() {
-  const res = await fetch('https://cms.com/...')
-	return await res.json()
-}
 
-export async function ServerComponent() {
-  const data = await getContent()
-	return (
-		<div>{data.title}</div>
-	)
-}
-```
+  ```TypeScript
+  // Server component with async / await
+  async function getContent() {
+    const res = await fetch('https://cms.com/...')
+    return await res.json()
+  }
+
+  export async function ServerComponent() {
+    const data = await getContent()
+    return (
+      <div>{data.title}</div>
+    )
+  }
+  ```
 
 ## Rendering
 * Next.js automatically opts the entire application into React Server Components (RSC).
@@ -85,16 +86,17 @@ export async function ServerComponent() {
   * Can be triggered automatically by built-in functions like `fetch()`, `cookies()`, or `headers()`. 
   * Using these in a Server Component without caching will opt the route into dynamic rendering.
 * **Partial Prerendering (PPR)**: Combines static rendering, dynamic rendering, and streaming in the same route using React Suspense. Serves a static shell with embedded fallback content in the initial HTML while streaming dynamic data.
-```TypeScript
-// Config Parameters
-const nextConfig = {
-  experimental: {
-    ppr: 'incremental',
-  }
-};
-// Page Level
-export const experimental_ppr = true;
-```
+
+  ```TypeScript
+  // Config Parameters
+  const nextConfig = {
+    experimental: {
+      ppr: 'incremental',
+    }
+  };
+  // Page Level
+  export const experimental_ppr = true;
+  ```
 
 ## Data Fetching
 
