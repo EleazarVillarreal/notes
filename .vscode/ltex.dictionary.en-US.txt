@@ -1,9 +1,0 @@
-Worktree
-useEffect
-useState
-useMemo
-params
-clsx
-Vercel
-Contentful
-Prerendering
