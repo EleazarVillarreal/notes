@@ -58,6 +58,7 @@
   ```
 
 ## Hooks
+### useState
 * `useState` is a React Hook that lets you add state to a component. It returns an array of exactly two values, the current state and a setter function, which are destructured using the convention `const [something, setSomething] = useState(initialValue)`.
 
 * The setter function returned by `useState` is asynchronous. Calling it does not immediately update the state variable. Instead, React queues the state change and re-renders the component with the new value on the next render. This means reading the state variable immediately after calling the setter will still return the old value.
@@ -73,3 +74,5 @@
     });
   ```
 
+### useId
+* `useId()` is a React Hook that generates a unique `id` for a specific instance of a component that remains stable across re-renders. It also ensures the generated `id` matches between server and client side rendering, avoiding hydration mismatches.
