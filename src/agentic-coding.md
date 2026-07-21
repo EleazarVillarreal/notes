@@ -1,3 +1,15 @@
 <image alt="Docker Logo" height="100px" src="../images/agentic-coding.png" width="100px" />
 
 # Agentic Coding 
+
+## General
+* LLMs don’t have memory. They “remember” things through their context window which is the maximum amount of tokens you can send to the model. You send your entire input and output of your chat to the LLM.
+* The system message is the "personality" behind every AI interaction. This is set by the provider and takes up part of your context window.
+* Allow LLMs to summarize your chats to bring context over to a brand new chat if your current chat is not producing the desired outcome.
+
+## Prompt Types
+* Standard Prompt - Direct question or instruction to AI. The simplest form of prompting.
+* Zero Shot Prompt - Direct task request without any examples. Model relies entirely on pre-training knowledge.
+* One Shot Prompt - Providing exactly one example with your request. Model learns the pattern, format, and style.
+* Few Shot Prompt - Provideing 2+ examples to establish patterns and edge cases. Model learns nuances and variatoins from diverse examples. Include variety.
+* Structured Output - Tell the model exactly how you want your response structured to get consistent formats every time.
