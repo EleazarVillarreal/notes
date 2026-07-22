@@ -15,3 +15,7 @@
 * Few Shot Prompt - Provideing 2+ examples to establish patterns and edge cases. Model learns nuances and variatoins from diverse examples. Include variety.
 * Structured Output - Tell the model exactly how you want your response structured to get consistent formats every time.
 * Chain Of Thought - Ask the model to show its reasoning step-by-step. Breaks complex problems into intermediate steps.
+
+## Cursor
+* Inline Edit (CMD + K) - Surgical, in-place code modifications directly in your code editor.
+* AI Chat (CMD + L or CMD + I) - Opens up a chat window along the side. Enables agentic coding for complex , multi-file tasks. You describe a goal and then the agent comes up with a plan and carries it out.
